@@ -1,4 +1,10 @@
-# Quora
+<p align="center">
+  <a href="#"><img src="./misc/quora.png" width="350"></a></br>
+  by</br>
+  <a href="#"><img src="./misc/Kaggle_logo.png" width="60"></a>
+</p>
+
+
 
 We use the `BiLSTM attention Kfold add features` kernel to get a silver medal at the Kaggle Quora competition.  
 This kernel stands on : 
