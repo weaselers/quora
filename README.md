@@ -27,13 +27,12 @@ This kernel stands on :
 
 ## Code for Loading Embeddings
 Function from [here](https://www.kaggle.com/gmhost/gru-capsule).
-`load_glove`
-`load_fasttext`
-`load_para`
+- `load_glove`
+- `load_fasttext`
+- `load_para`
 
 ## Load processed training data from disk
-`build_vocab`
-
+- `build_vocab`
 
 ## Normalization
 
@@ -41,45 +40,43 @@ Borrowed from:
 - How to: [Preprocessing when using embeddings](https://www.kaggle.com/christofhenkel/how-to-preprocessing-when-using-embeddings)
 - Improve your Score with some [Text Preprocessing](https://www.kaggle.com/theoviel/improve-your-score-with-some-text-preprocessing)
 
-build_vocab
-
-
-known_contractions
-clean_contractions
-correct_spelling
-unknown_punct
-clean_numbers
-clean_special_chars
-add_lower
-clean_text
-clean_numbers
-_get_mispell
-replace_typical_misspell
+- `build_vocab`
+- `known_contractions`
+- `clean_contractions`
+- `correct_spelling`
+- `unknown_punct`
+- `clean_numbers`
+- `clean_special_chars`
+- `add_lower`
+- `clean_text`
+- `clean_numbers`
+- `_get_mispell`
+- `replace_typical_misspell`
 
 Extra feature part taken [here](https://github.com/wongchunghang/toxic-comment-challenge-lstm/blob/master/toxic_comment_9872_model.ipynb)
 
-add_features_before_cleaning
-- count_contains_a_punct
-- count_contains_a_string
-- count_words_more_frequent_in_insc
-- count_words_more_frequent_in_sc
+- `add_features_before_cleaning`
+    - `count_contains_a_punct`
+    - `count_contains_a_string`
+    - `count_words_more_frequent_in_insc`
+    - `count_words_more_frequent_in_sc`
 
-add_features_custom
-- count_contains_a_string
-- count_words_more_frequent_in_insc
-- count_words_more_frequent_in_sc
+- `add_features_custom`
+    - `count_contains_a_string`
+    - `count_words_more_frequent_in_insc`
+    - `count_words_more_frequent_in_sc`
 
-add_features
+`add_features`
 
-load_and_prec
-- lower
-- Clean the text
-- Clean numbers
-- Clean speelings
-- fill up the missing values
+`load_and_prec`
+    - `lower`
+    - `Clean the text`
+    - `Clean numbers`
+    - `Clean speelings`
+    - `fill up the missing values`
 
 Add Features
--  https://github.com/wongchunghang/toxic-comment-challenge-lstm/blob/master/toxic_comment_9872_model.ipynb
+- https://github.com/wongchunghang/toxic-comment-challenge-lstm/blob/master/toxic_comment_9872_model.ipynb
 - Tokenize the sentences
 - Pad the sentences 
 - Get the target values
@@ -95,8 +92,8 @@ Add Features
 
 ## Load Embeddings
 
-Two embedding matrices have been used. Glove, and paragram. The mean of the two is used as the final embedding matrix
-# missing entries in the embedding are set using np.random.normal so we have to seed here too
+Two embedding matrices have been used. Glove, and paragram. The mean of the two is used as the final embedding matrix.
+Missing entries in the embedding are set using np.random.normal so we have to seed here too
 
 
 ## Use Stratified K Fold to improve results
@@ -106,54 +103,52 @@ Two embedding matrices have been used. Glove, and paragram. The mean of the two 
 
 Code taken [here](https://www.kaggle.com/dannykliu/lstm-with-attention-clr-in-pytorch)
 code inspired from: https://github.com/anandsaha/pytorch.cyclic.learning.rate/blob/master/cls.py
-`CyclicLR`
-    batch_step
-    _triangular_scale_fn
-    _triangular2_scale_fn
-    _exp_range_scale_fn
-    get_lr
+- `CyclicLR`
+    - `batch_step`
+    - `_triangular_scale_fn`
+    - `_triangular2_scale_fn`
+    - `_exp_range_scale_fn`
+    - `get_lr`
 
 
-# Model Architecture
+## Model Architecture
 
 Binary LSTM with an attention layer and an additional fully connected layer. Also added extra features taken from a winning kernel of the toxic comments competition. Also using CLR and a capsule Layer. Blended together in concatentation.
 
 Initial idea borrowed from: https://www.kaggle.com/ziliwang/baseline-pytorch-bilstm
-Embed_Layer
-forward
+- `Embed_Layer`
+    - `forward`
 
-GRU_Layer
-init_weights
-forward
+- `GRU_Layer`
+    - `init_weights`
+    - `forward`
 
-Caps_Layer
-forward
-squash
+- `Caps_Layer`
+    - `forward`
+    - `squash`
 
-Capsule_Main
-forward
+- `Capsule_Main`
+    - `forward`
 
-Attention
-forward
+- `Attention`
+    - `forward`
 
-NeuralNet
-forward
+- `NeuralNet`
+    - `forward`
 
-
-
-# Training
+## Training
 
 The method for training is borrowed from https://www.kaggle.com/hengzheng/pytorch-starter
-MyDataset
-__getitem__
-__len__
+- `MyDataset`
+    -`__getitem__`
+    - `__len__`
 
-sigmoid
+- `sigmoid`
 
 
-# Find final Thresshold
+## Find final Thresshold
 
 Borrowed from: https://www.kaggle.com/ziliwang/baseline-pytorch-bilstm
-bestThresshold
+- `bestThresshold`
 
-# submission 
+## submission 
