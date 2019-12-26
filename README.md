@@ -6,7 +6,7 @@
 
 
 
-We use the `BiLSTM attention Kfold add features` kernel to get a silver medal at the Kaggle Quora competition.  
+We use the `BiLSTM attention Kfold add features` kernel to reach [0.703 score](https://www.kaggle.com/c/quora-insincere-questions-classification/leaderboard) at the Kaggle Quora competition.  
 This kernel stands on : 
 - [gru-capsule](https://www.kaggle.com/gmhost/gru-capsule)
 - How to: [Preprocessing when using embedding](https://www.kaggle.com/christofhenkel/how-to-preprocessing-when-using-embeddings)
